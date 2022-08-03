@@ -17,5 +17,5 @@ type IComment =
 
 type ICommentProvider =
     abstract fetch: u64 -> IComment
-    abstract create: IComment -> u64
-    abstract delete: u64 -> u64 * IComment
+    abstract create: IComment -> IComment
+    abstract delete: u64 -> IComment

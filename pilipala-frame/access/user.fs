@@ -15,7 +15,7 @@ type IUser =
 
 type IUserProvider =
     abstract fetch: u64 -> IUser
-    abstract create: IUser -> u64
-    abstract delete: u64 -> u64 * IUser
+    abstract create: IUser -> IUser
+    abstract delete: u64 -> IUser
 
 type LoginData = { userName: string; userPwd: string }

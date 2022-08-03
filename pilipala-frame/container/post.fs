@@ -15,5 +15,5 @@ type IPost =
 
 type IPostProvider =
     abstract fetch: u64 -> IPost
-    abstract create: IPost -> u64
-    abstract delete: u64 -> u64 * IPost
+    abstract create: IPost -> IPost
+    abstract delete: u64 -> IPost
