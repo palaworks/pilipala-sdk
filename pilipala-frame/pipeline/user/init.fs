@@ -6,4 +6,4 @@ open pilipala.pipeline
 open pilipala.access.user
 
 type IUserInitPipelineBuilder =
-    abstract Batch: BuilderItem<IUser * string, u64>
+    abstract Batch: BuilderItem<UserData, u64>

@@ -11,9 +11,9 @@
         <Compile Include="id\uuid.fs" />
         <Compile Include="id\palaflake.fs" />
         <Compile Include="plugin\config.fs" />
-        <Compile Include="access\user.fs" />
         <Compile Include="container\post.fs" />
         <Compile Include="container\comment.fs" />
+        <Compile Include="access\user.fs" />
         <Compile Include="pipeline\pipeline.fs" />
         <Compile Include="pipeline\post\init.fs" />
         <Compile Include="pipeline\post\render.fs" />
