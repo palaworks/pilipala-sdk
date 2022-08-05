@@ -6,4 +6,4 @@ open pilipala.pipeline
 open pilipala.container.comment
 
 type ICommentInitPipelineBuilder =
-    abstract Batch: BuilderItem<IComment, u64 * IComment>
+    abstract Batch: BuilderItem<CommentData, u64>
