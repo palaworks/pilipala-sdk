@@ -27,12 +27,14 @@ type IMappedUser =
     abstract AccessTime: DateTime with get, set
     abstract Permission: u16 with get, set
     abstract Item: string -> Option'<obj> with get, set
+
 (*
     abstract GetPost: id: u64 -> Result'<IPost, string>
     abstract NewPost: title: string * body: string -> Result'<IPost, string>
     abstract NewCommentOn: IPost * body: string -> Result'<IComment, string>
     abstract NewCommentOn: IComment * body: string -> Result'<IComment, string>
 *)
+
 type IMappedUserProvider =
     abstract fetch: u64 -> IMappedUser
     abstract create: UserData -> IMappedUser
