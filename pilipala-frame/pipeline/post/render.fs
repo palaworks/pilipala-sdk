@@ -2,6 +2,7 @@ namespace pilipala.pipeline.post
 
 open System
 open System.Collections.Generic
+open fsharper.typ
 open fsharper.op.Alias
 open pilipala.pipeline
 
@@ -17,3 +18,13 @@ type IPostRenderPipelineBuilder =
 
     //用于遍历Item
     inherit IEnumerable<KeyValuePair<string, BuilderItem<u64, u64 * obj>>>
+
+type IPostRenderPipeline =
+    abstract Title: u64 -> u64 * string
+    abstract Body: u64 -> u64 * string
+    abstract CreateTime: u64 -> u64 * DateTime
+    abstract AccessTime: u64 -> u64 * DateTime
+    abstract ModifyTime: u64 -> u64 * DateTime
+    abstract UserId: u64 -> u64 * u64
+    abstract Permission: u64 -> u64 * u16
+    abstract Item: string -> Option'<u64 -> u64 * obj>
