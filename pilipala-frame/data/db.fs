@@ -86,6 +86,9 @@ module ext_IDbOperationBuilder =
             (cmd: DbCommand)
                 .getFstRow (table, whereKey, whereVal)
 
+        [<CustomOperation("getFstRow")>]
+        member db.getFstRow(cmd, sql, paras) = (cmd: DbCommand).getFstRow (sql, paras)
+
         [<CustomOperation("getFstCol")>]
         member db.getFstCol(cmd, sql, paras) = (cmd: DbCommand).getFstCol (sql, paras)
 

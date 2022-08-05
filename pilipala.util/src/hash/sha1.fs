@@ -5,11 +5,17 @@ open System
 open System.Security.Cryptography
 open pilipala.util.encoding
 
+type SHA1 = { sha1: string }
+
 type String with
 
     /// 字符串的sha1签名
     member self.sha1 =
-        self
-        |> utf8ToBytes
-        |> SHA1.Create().ComputeHash
-        |> bytesToHex
+        { sha1 =
+            self
+            |> utf8ToBytes
+            |> SHA1.Create().ComputeHash
+            |> bytesToHex }
+
+type SHA1 with
+    member self.Verify(text: string) = text.sha1.sha1 = self.sha1
