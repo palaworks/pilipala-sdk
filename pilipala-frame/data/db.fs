@@ -3,7 +3,7 @@ namespace pilipala.data.db
 open System.Data.Common
 open fsharper.typ
 open fsharper.typ.Ord
-open fsharper.op.Alias
+open fsharper.alias
 open DbManaged
 open DbManaged.PgSql
 
@@ -85,6 +85,9 @@ module ext_IDbOperationBuilder =
         member db.getFstRow((cmd, table), whereKey, whereVal) =
             (cmd: DbCommand)
                 .getFstRow (table, whereKey, whereVal)
+
+        [<CustomOperation("getFstRow")>]
+        member db.getFstRow(cmd, sql, paras) = (cmd: DbCommand).getFstRow (sql, paras)
 
         [<CustomOperation("getFstCol")>]
         member db.getFstCol(cmd, sql, paras) = (cmd: DbCommand).getFstCol (sql, paras)

@@ -1,7 +1,7 @@
 namespace pilipala.container.post
 
 open System
-open fsharper.op.Alias
+open fsharper.alias
 open fsharper.typ
 
 /// 文章数据
