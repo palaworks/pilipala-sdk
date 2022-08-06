@@ -4,7 +4,7 @@ module pilipala.util.socket.tcp
 open System
 open System.Net
 open System.Net.Sockets
-open fsharper.op.Alias
+open fsharper.alias
 open fsharper.typ.Array
 open pilipala.util.encoding
 

@@ -4,7 +4,7 @@ module pilipala.util.crypto.rsa
 open System
 open System.Text
 open System.Security.Cryptography
-open fsharper.op.Alias
+open fsharper.alias
 open pilipala.util.encoding
 
 /// 加密明文

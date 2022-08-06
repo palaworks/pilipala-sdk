@@ -4,7 +4,7 @@ module pilipala.util.id.palaflake
 
 open System
 open System.Threading
-open fsharper.op.Alias
+open fsharper.alias
 
 type Generator(instanceId: u8, startYear: u16) =
 

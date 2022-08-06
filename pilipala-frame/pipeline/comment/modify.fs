@@ -2,7 +2,7 @@ namespace pilipala.pipeline.comment
 
 open System
 open System.Collections.Generic
-open fsharper.op.Alias
+open fsharper.alias
 open fsharper.typ
 open pilipala.pipeline
 open pilipala.container.comment

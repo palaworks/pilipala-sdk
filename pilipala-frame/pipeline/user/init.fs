@@ -1,7 +1,7 @@
 namespace pilipala.pipeline.user
 
 open System
-open fsharper.op.Alias
+open fsharper.alias
 open pilipala.pipeline
 open pilipala.access.user
 

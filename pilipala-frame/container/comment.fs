@@ -2,7 +2,7 @@ namespace pilipala.container.comment
 
 open System
 open fsharper.typ
-open fsharper.op.Alias
+open fsharper.alias
 
 type CommentBinding =
     | BindPost of u64
