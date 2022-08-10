@@ -13,7 +13,7 @@ type IPostRenderPipelineBuilder =
     abstract AccessTime: BuilderItem<u64, u64 * DateTime>
     abstract ModifyTime: BuilderItem<u64, u64 * DateTime>
     abstract UserId: BuilderItem<u64, u64 * u64>
-    abstract Permission: BuilderItem<u64, u64 * u16>
+    abstract Permission: BuilderItem<u64, u64 * u8>
     abstract Item: string -> BuilderItem<u64, u64 * obj>
 
     //用于遍历Item
@@ -26,5 +26,5 @@ type IPostRenderPipeline =
     abstract AccessTime: u64 -> u64 * DateTime
     abstract ModifyTime: u64 -> u64 * DateTime
     abstract UserId: u64 -> u64 * u64
-    abstract Permission: u64 -> u64 * u16
+    abstract Permission: u64 -> u64 * u8
     abstract Item: string -> Option'<u64 -> u64 * obj>
