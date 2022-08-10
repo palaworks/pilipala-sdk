@@ -14,7 +14,7 @@ type PostData =
       AccessTime: DateTime
       ModifyTime: DateTime
       UserId: u64
-      Permission: u16
+      Permission: u8
       Item: string -> Option'<obj> }
 
 /// 文章映射
@@ -27,7 +27,7 @@ type IMappedPost =
     abstract AccessTime: DateTime with get, set
     abstract ModifyTime: DateTime with get, set
     abstract UserId: u64 with get, set
-    abstract Permission: u16 with get, set
+    abstract Permission: u8 with get, set
     abstract Item: string -> Option'<obj> with get, set
 
 //TODO 可以添加Item迭代器，以实现在Init管道的udf初始化
