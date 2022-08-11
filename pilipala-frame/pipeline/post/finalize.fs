@@ -6,7 +6,7 @@ open pilipala.pipeline
 open pilipala.container.post
 
 type IPostFinalizePipelineBuilder =
-    abstract Batch: BuilderItem<u64, PostData>
+    abstract Batch: BuilderItem<i64, PostData>
 
 type IPostFinalizePipeline =
-    abstract Batch: u64 -> PostData
+    abstract Batch: i64 -> PostData

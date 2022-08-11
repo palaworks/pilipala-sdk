@@ -3,4 +3,4 @@ namespace pilipala.id
 open fsharper.alias
 
 type IPalaflakeGenerator =
-    abstract member next: unit -> u64
+    abstract member next: unit -> i64

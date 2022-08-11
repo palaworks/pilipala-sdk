@@ -2,7 +2,6 @@ namespace pilipala.data.db
 
 open System.Data.Common
 open fsharper.typ
-open fsharper.typ.Ord
 open fsharper.alias
 open DbManaged
 open DbManaged.PgSql

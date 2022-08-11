@@ -8,20 +8,20 @@ open fsharper.typ.Option'
 open pilipala.pipeline
 
 type IUserRenderPipelineBuilder =
-    abstract Name: BuilderItem<u64, u64 * string>
-    abstract Email: BuilderItem<u64, u64 * string>
-    abstract CreateTime: BuilderItem<u64, u64 * DateTime>
-    abstract AccessTime: BuilderItem<u64, u64 * DateTime>
-    abstract Permission: BuilderItem<u64, u64 * u16>
-    abstract Item: string -> BuilderItem<u64, u64 * obj>
+    abstract Name: BuilderItem<i64, i64 * string>
+    abstract Email: BuilderItem<i64, i64 * string>
+    abstract CreateTime: BuilderItem<i64, i64 * DateTime>
+    abstract AccessTime: BuilderItem<i64, i64 * DateTime>
+    abstract Permission: BuilderItem<i64, i64 * u16>
+    abstract Item: string -> BuilderItem<i64, i64 * obj>
 
     //用于遍历Item
-    inherit IEnumerable<KeyValuePair<string, BuilderItem<u64, u64 * obj>>>
+    inherit IEnumerable<KeyValuePair<string, BuilderItem<i64, i64 * obj>>>
 
 type IUserRenderPipeline =
-    abstract Name: u64 -> u64 * string
-    abstract Email: u64 -> u64 * string
-    abstract CreateTime: u64 -> u64 * DateTime
-    abstract AccessTime: u64 -> u64 * DateTime
-    abstract Permission: u64 -> u64 * u16
-    abstract Item: string -> Option'<u64 -> u64 * obj>
+    abstract Name: i64 -> i64 * string
+    abstract Email: i64 -> i64 * string
+    abstract CreateTime: i64 -> i64 * DateTime
+    abstract AccessTime: i64 -> i64 * DateTime
+    abstract Permission: i64 -> i64 * u16
+    abstract Item: string -> Option'<i64 -> i64 * obj>

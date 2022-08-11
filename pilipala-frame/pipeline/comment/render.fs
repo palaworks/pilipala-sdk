@@ -8,20 +8,20 @@ open pilipala.container.comment
 open pilipala.pipeline
 
 type ICommentRenderPipelineBuilder =
-    abstract Body: BuilderItem<u64, u64 * string>
-    abstract Binding: BuilderItem<u64, u64 * CommentBinding>
-    abstract CreateTime: BuilderItem<u64, u64 * DateTime>
-    abstract UserId: BuilderItem<u64, u64 * u64>
-    abstract Permission: BuilderItem<u64, u64 * u8>
-    abstract Item: string -> BuilderItem<u64, u64 * obj>
+    abstract Body: BuilderItem<i64, i64 * string>
+    abstract Binding: BuilderItem<i64, i64 * CommentBinding>
+    abstract CreateTime: BuilderItem<i64, i64 * DateTime>
+    abstract UserId: BuilderItem<i64, i64 * i64>
+    abstract Permission: BuilderItem<i64, i64 * u8>
+    abstract Item: string -> BuilderItem<i64, i64 * obj>
 
     //用于遍历Item
-    inherit IEnumerable<KeyValuePair<string, BuilderItem<u64, u64 * obj>>>
+    inherit IEnumerable<KeyValuePair<string, BuilderItem<i64, i64 * obj>>>
 
 type ICommentRenderPipeline =
-    abstract Body: u64 -> u64 * string
-    abstract Binding: u64 -> u64 * CommentBinding
-    abstract CreateTime: u64 -> u64 * DateTime
-    abstract UserId: u64 -> u64 * u64
-    abstract Permission: u64 -> u64 * u8
-    abstract Item: string -> Option'<u64 -> u64 * obj>
+    abstract Body: i64 -> i64 * string
+    abstract Binding: i64 -> i64 * CommentBinding
+    abstract CreateTime: i64 -> i64 * DateTime
+    abstract UserId: i64 -> i64 * i64
+    abstract Permission: i64 -> i64 * u8
+    abstract Item: string -> Option'<i64 -> i64 * obj>
