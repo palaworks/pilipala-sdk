@@ -7,24 +7,24 @@ open fsharper.alias
 open pilipala.pipeline
 
 type IPostRenderPipelineBuilder =
-    abstract Title: BuilderItem<u64, u64 * string>
-    abstract Body: BuilderItem<u64, u64 * string>
-    abstract CreateTime: BuilderItem<u64, u64 * DateTime>
-    abstract AccessTime: BuilderItem<u64, u64 * DateTime>
-    abstract ModifyTime: BuilderItem<u64, u64 * DateTime>
-    abstract UserId: BuilderItem<u64, u64 * u64>
-    abstract Permission: BuilderItem<u64, u64 * u8>
-    abstract Item: string -> BuilderItem<u64, u64 * obj>
+    abstract Title: BuilderItem<i64, i64 * string>
+    abstract Body: BuilderItem<i64, i64 * string>
+    abstract CreateTime: BuilderItem<i64, i64 * DateTime>
+    abstract AccessTime: BuilderItem<i64, i64 * DateTime>
+    abstract ModifyTime: BuilderItem<i64, i64 * DateTime>
+    abstract UserId: BuilderItem<i64, i64 * i64>
+    abstract Permission: BuilderItem<i64, i64 * u8>
+    abstract Item: string -> BuilderItem<i64, i64 * obj>
 
     //用于遍历Item
-    inherit IEnumerable<KeyValuePair<string, BuilderItem<u64, u64 * obj>>>
+    inherit IEnumerable<KeyValuePair<string, BuilderItem<i64, i64 * obj>>>
 
 type IPostRenderPipeline =
-    abstract Title: u64 -> u64 * string
-    abstract Body: u64 -> u64 * string
-    abstract CreateTime: u64 -> u64 * DateTime
-    abstract AccessTime: u64 -> u64 * DateTime
-    abstract ModifyTime: u64 -> u64 * DateTime
-    abstract UserId: u64 -> u64 * u64
-    abstract Permission: u64 -> u64 * u8
-    abstract Item: string -> Option'<u64 -> u64 * obj>
+    abstract Title: i64 -> i64 * string
+    abstract Body: i64 -> i64 * string
+    abstract CreateTime: i64 -> i64 * DateTime
+    abstract AccessTime: i64 -> i64 * DateTime
+    abstract ModifyTime: i64 -> i64 * DateTime
+    abstract UserId: i64 -> i64 * i64
+    abstract Permission: i64 -> i64 * u8
+    abstract Item: string -> Option'<i64 -> i64 * obj>

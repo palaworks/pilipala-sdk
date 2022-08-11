@@ -7,20 +7,20 @@ open fsharper.typ
 open pilipala.pipeline
 
 type IUserModifyPipelineBuilder =
-    abstract Name: BuilderItem<u64 * string>
-    abstract Email: BuilderItem<u64 * string>
-    abstract CreateTime: BuilderItem<u64 * DateTime>
-    abstract AccessTime: BuilderItem<u64 * DateTime>
-    abstract Permission: BuilderItem<u64 * u16>
-    abstract Item: string -> BuilderItem<u64 * obj>
+    abstract Name: BuilderItem<i64 * string>
+    abstract Email: BuilderItem<i64 * string>
+    abstract CreateTime: BuilderItem<i64 * DateTime>
+    abstract AccessTime: BuilderItem<i64 * DateTime>
+    abstract Permission: BuilderItem<i64 * u16>
+    abstract Item: string -> BuilderItem<i64 * obj>
 
     //用于遍历Item
-    inherit IEnumerable<KeyValuePair<string, BuilderItem<u64 * obj>>>
+    inherit IEnumerable<KeyValuePair<string, BuilderItem<i64 * obj>>>
 
 type IUserModifyPipeline =
-    abstract Name: (u64 * string) -> u64 * string
-    abstract Email: (u64 * string) -> u64 * string
-    abstract CreateTime: (u64 * DateTime) -> u64 * DateTime
-    abstract AccessTime: (u64 * DateTime) -> u64 * DateTime
-    abstract Permission: (u64 * u16) -> u64 * u16
-    abstract Item: string -> Option'<u64 * obj -> u64 * obj>
+    abstract Name: (i64 * string) -> i64 * string
+    abstract Email: (i64 * string) -> i64 * string
+    abstract CreateTime: (i64 * DateTime) -> i64 * DateTime
+    abstract AccessTime: (i64 * DateTime) -> i64 * DateTime
+    abstract Permission: (i64 * u16) -> i64 * u16
+    abstract Item: string -> Option'<i64 * obj -> i64 * obj>
