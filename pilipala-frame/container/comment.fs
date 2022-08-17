@@ -1,6 +1,8 @@
 namespace pilipala.container.comment
 
 open System
+open System.Collections
+open System.Collections.Generic
 open fsharper.typ
 open fsharper.alias
 
@@ -17,7 +19,16 @@ type CommentData =
       Binding: CommentBinding
       UserId: i64
       Permission: u8
-      Item: string -> Option'<obj> }
+      Props: Map<string, obj> }
+    member self.Item name =
+        self.Props.TryGetValue(name).intoOption' ()
+
+    interface IEnumerable<KeyValuePair<string, obj>> with
+        member i.GetEnumerator() =
+            (i.Props :> IEnumerable).GetEnumerator()
+
+        member i.GetEnumerator() =
+            (i.Props :> IEnumerable<_>).GetEnumerator()
 
 /// 评论映射
 /// 此类型面向底层公开，负责同步性更改数据库条目

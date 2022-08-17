@@ -1,6 +1,8 @@
 namespace pilipala.access.user
 
 open System
+open System.Collections
+open System.Collections.Generic
 open fsharper.typ
 open fsharper.alias
 open pilipala.container.post
@@ -15,7 +17,16 @@ type UserData =
       CreateTime: DateTime
       AccessTime: DateTime
       Permission: u16
-      Item: string -> Option'<obj> }
+      Props: Map<string, obj> }
+    member self.Item name =
+        self.Props.TryGetValue(name).intoOption' ()
+
+    interface IEnumerable<KeyValuePair<string, obj>> with
+        member i.GetEnumerator() =
+            (i.Props :> IEnumerable).GetEnumerator()
+
+        member i.GetEnumerator() =
+            (i.Props :> IEnumerable<_>).GetEnumerator()
 
 /// 用户映射
 /// 此类型面向底层公开，负责同步性更改数据库条目
