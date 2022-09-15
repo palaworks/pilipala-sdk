@@ -25,6 +25,8 @@
         <Compile Include="src\text\yaml.fs" />
         <Compile Include="src\text\html.fs" />
         <Compile Include="src\text\markdown.fs" />
+        <Compile Include="src\text\time.fs" />
+        <Compile Include="src\text\string.fs" />
         <Compile Include="src\id\uuid.fs" />
         <Compile Include="src\id\palaflake.fs" />
     </ItemGroup>

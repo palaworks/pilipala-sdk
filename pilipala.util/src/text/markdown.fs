@@ -29,3 +29,5 @@ type Markdown with
         let pipeline = builder.Build()
 
         { html = Markdown.ToHtml(self.markdown, pipeline) }
+
+//TODO remove markdown marks
