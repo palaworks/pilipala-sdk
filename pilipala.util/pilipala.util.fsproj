@@ -43,8 +43,14 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Reference Include="DbManaged">
+          <HintPath>..\..\DbManaged\bin\Release\net6.0\DbManaged.dll</HintPath>
+        </Reference>
         <Reference Include="fsharper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
             <HintPath>..\..\fsharper\bin\Debug\net6.0\fsharper.dll</HintPath>
+        </Reference>
+        <Reference Include="pilipala-frame">
+          <HintPath>..\pilipala-frame\bin\Debug\net6.0\pilipala-frame.dll</HintPath>
         </Reference>
     </ItemGroup>
 

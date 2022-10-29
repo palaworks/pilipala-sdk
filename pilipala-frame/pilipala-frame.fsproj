@@ -7,7 +7,6 @@
 
     <ItemGroup>
         <Compile Include="data\db.fs" />
-        <Compile Include="data\kv.fs" />
         <Compile Include="id\uuid.fs" />
         <Compile Include="id\palaflake.fs" />
         <Compile Include="plugin\plugin.fs" />
@@ -30,7 +29,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Update="FSharp.Core" Version="6.0.5" />
+      <PackageReference Update="FSharp.Core" Version="6.0.6" />
     </ItemGroup>
 
     <ItemGroup>

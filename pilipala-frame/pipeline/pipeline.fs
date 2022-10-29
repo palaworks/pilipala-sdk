@@ -4,7 +4,6 @@ open System
 open System.Collections.Generic
 open fsharper.op
 open fsharper.typ
-open fsharper.typ.Pipe
 open fsharper.op.Foldable
 
 type PipelineCombineMode<'I, 'O> =
@@ -21,10 +20,8 @@ type BuilderItem<'I, 'O> =
 
 type BuilderItem<'T> = BuilderItem<'T, 'T>
 
-
 [<AutoOpen>]
 module ext_BuilderItem =
-
     type BuilderItem<'I, 'O> with
         member inline self.fullyBuild basePipe =
             let fail =
@@ -47,9 +44,9 @@ module ext_BuilderItem =
             self.collection.foldl
             <| fun acc x ->
                 match x with
-                | Before _ -> acc
                 | Replace f -> f acc
                 | After after -> acc .> after
+                | _ -> acc
             <| basePipe fail
 
         member inline self.noneAfterBuild basePipe =
@@ -62,5 +59,5 @@ module ext_BuilderItem =
                 match x with
                 | Before before -> before .> acc
                 | Replace f -> f acc
-                | After _ -> acc
+                | _ -> acc
             <| basePipe fail

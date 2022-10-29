@@ -5,6 +5,11 @@ open fsharper.typ
 open fsharper.alias
 open DbManaged
 open DbManaged.PgSql
+open System.Data.Common
+open fsharper.typ
+open fsharper.alias
+open DbManaged
+open DbManaged.PgSql
 
 type DbConfig =
     { connection: {| host: string //考虑到后续可能换用其他控制器，此处与DbManaged不作耦合
