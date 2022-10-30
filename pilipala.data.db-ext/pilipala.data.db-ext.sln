@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "pilipala.data.db-ext", "pilipala.data.db-ext.fsproj", "{10D7D9B1-B1A4-4DDC-A175-F620E4FF089F}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "pilipala-frame", "..\pilipala-frame\pilipala-frame.fsproj", "{69E34603-E8D8-4760-9D9C-996C1AE99DFE}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "fsharper", "..\..\fsharper\fsharper.fsproj", "{9B1543D9-844A-4432-A1DD-B82B70FECC67}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "DbManaged", "..\..\DbManaged\DbManaged.fsproj", "{C3BB6A50-B8C1-4CF0-928D-CD55536EFF55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10D7D9B1-B1A4-4DDC-A175-F620E4FF089F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10D7D9B1-B1A4-4DDC-A175-F620E4FF089F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10D7D9B1-B1A4-4DDC-A175-F620E4FF089F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10D7D9B1-B1A4-4DDC-A175-F620E4FF089F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E34603-E8D8-4760-9D9C-996C1AE99DFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E34603-E8D8-4760-9D9C-996C1AE99DFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E34603-E8D8-4760-9D9C-996C1AE99DFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E34603-E8D8-4760-9D9C-996C1AE99DFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B1543D9-844A-4432-A1DD-B82B70FECC67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B1543D9-844A-4432-A1DD-B82B70FECC67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B1543D9-844A-4432-A1DD-B82B70FECC67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B1543D9-844A-4432-A1DD-B82B70FECC67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3BB6A50-B8C1-4CF0-928D-CD55536EFF55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3BB6A50-B8C1-4CF0-928D-CD55536EFF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3BB6A50-B8C1-4CF0-928D-CD55536EFF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3BB6A50-B8C1-4CF0-928D-CD55536EFF55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -2,17 +2,18 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>pilipala.data.db_ext</RootNamespace>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="src\main.fs" />
+        <Compile Include="src\ext_IDbOperationBuilder.fs" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\DbManaged\DbManaged.fsproj" />
-      <ProjectReference Include="..\..\..\fsharper\fsharper.fsproj" />
-      <ProjectReference Include="..\..\pilipala-frame\pilipala-frame.fsproj" />
+      <ProjectReference Include="..\..\DbManaged\DbManaged.fsproj" />
+      <ProjectReference Include="..\..\fsharper\fsharper.fsproj" />
+      <ProjectReference Include="..\pilipala-frame\pilipala-frame.fsproj" />
     </ItemGroup>
 
     <ItemGroup>

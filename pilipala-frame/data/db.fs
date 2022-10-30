@@ -23,16 +23,16 @@ type IDbOperationBuilder =
     abstract makeCmd: unit -> DbCommand
 
     [<CustomOperation("execute")>]
-    abstract execute: DbCommand -> 'r
+    abstract execute: (DbConnection -> 'r) -> 'r
 
     [<CustomOperation("executeAsync")>]
-    abstract executeQueryAsync: DbCommand -> Task<'r>
+    abstract executeQueryAsync: (DbConnection -> Task<'r>) -> Task<'r>
 
     [<CustomOperation("queue")>]
-    abstract queue: DbCommand -> Task<'r>
+    abstract queue: (DbConnection -> 'r) -> Task<'r>
 
     [<CustomOperation("delay")>]
-    abstract delay: DbCommand -> Task<'r>
+    abstract delay: (DbConnection -> 'r) -> Task<'r>
 
     /// 表集合
     abstract tables:
