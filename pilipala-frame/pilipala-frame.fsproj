@@ -33,12 +33,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Reference Include="DbManaged">
-        <HintPath>..\..\DbManaged\bin\Debug\net6.0\DbManaged.dll</HintPath>
-      </Reference>
-      <Reference Include="fsharper">
-        <HintPath>..\..\fsharper\bin\Debug\net6.0\fsharper.dll</HintPath>
-      </Reference>
+      <ProjectReference Include="..\..\fsharper\fsharper.fsproj" />
     </ItemGroup>
 
 </Project>

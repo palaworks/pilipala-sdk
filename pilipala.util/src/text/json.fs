@@ -14,7 +14,7 @@ type Json with
     /// 反序列化
     member self.deserializeTo<'t>() =
         fun _ -> JsonConvert.DeserializeObject<'t> self.json
-        |> Option'.fromThrowable
+        |> Result'.fromThrowable
 
     /// 序列化
     static member serializeFrom(obj) =
