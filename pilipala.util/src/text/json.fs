@@ -5,13 +5,16 @@ open System
 open Newtonsoft.Json
 open Newtonsoft.Json.Converters
 open Newtonsoft.Json.Linq
+open fsharper.op
+open fsharper.typ
 
 type Json = { json: string }
 
 type Json with
     /// 反序列化
     member self.deserializeTo<'t>() =
-        JsonConvert.DeserializeObject<'t> self.json
+        fun _ -> JsonConvert.DeserializeObject<'t> self.json
+        |> Result'.fromThrowable
 
     /// 序列化
     static member serializeFrom(obj) =

@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "pilipala.util", "pilipala.util.fsproj", "{5060EC55-2EFA-4B19-8BF1-12C3DCE3B81E}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "pilipala-frame", "..\pilipala-frame\pilipala-frame.fsproj", "{F9E5049D-6BDE-4B75-9B45-A2EA8C5F9210}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "fsharper", "..\..\fsharper\fsharper.fsproj", "{A31A5AC2-A2D2-4703-9F1C-1BEF46127A31}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "DbManaged", "..\..\DbManaged\DbManaged.fsproj", "{EBD18787-2D6C-4180-810C-59147C5B88C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,17 @@ Global
 		{5060EC55-2EFA-4B19-8BF1-12C3DCE3B81E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5060EC55-2EFA-4B19-8BF1-12C3DCE3B81E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5060EC55-2EFA-4B19-8BF1-12C3DCE3B81E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E5049D-6BDE-4B75-9B45-A2EA8C5F9210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E5049D-6BDE-4B75-9B45-A2EA8C5F9210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E5049D-6BDE-4B75-9B45-A2EA8C5F9210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E5049D-6BDE-4B75-9B45-A2EA8C5F9210}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A31A5AC2-A2D2-4703-9F1C-1BEF46127A31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A31A5AC2-A2D2-4703-9F1C-1BEF46127A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A31A5AC2-A2D2-4703-9F1C-1BEF46127A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A31A5AC2-A2D2-4703-9F1C-1BEF46127A31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBD18787-2D6C-4180-810C-59147C5B88C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD18787-2D6C-4180-810C-59147C5B88C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD18787-2D6C-4180-810C-59147C5B88C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD18787-2D6C-4180-810C-59147C5B88C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -7,7 +7,6 @@
 
     <ItemGroup>
         <Compile Include="data\db.fs" />
-        <Compile Include="data\kv.fs" />
         <Compile Include="id\uuid.fs" />
         <Compile Include="id\palaflake.fs" />
         <Compile Include="plugin\plugin.fs" />
@@ -30,16 +29,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Update="FSharp.Core" Version="6.0.5" />
+      <PackageReference Update="FSharp.Core" Version="6.0.6" />
     </ItemGroup>
 
     <ItemGroup>
-      <Reference Include="DbManaged">
-        <HintPath>..\..\DbManaged\bin\Debug\net6.0\DbManaged.dll</HintPath>
-      </Reference>
-      <Reference Include="fsharper">
-        <HintPath>..\..\fsharper\bin\Debug\net6.0\fsharper.dll</HintPath>
-      </Reference>
+      <ProjectReference Include="..\..\fsharper\fsharper.fsproj" />
     </ItemGroup>
 
 </Project>
