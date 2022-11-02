@@ -46,3 +46,23 @@ type IMappedCommentProvider =
     abstract fetch: i64 -> IMappedComment
     abstract create: CommentData -> IMappedComment
     abstract delete: i64 -> CommentData
+
+type IComment =
+
+    abstract CanRead: bool
+    abstract CanWrite: bool
+    abstract CanComment: bool
+
+    abstract Id: i64
+    abstract Body: Result'<string, string>
+    abstract CreateTime: Result'<DateTime, string>
+    abstract UserId: Result'<i64, string>
+    abstract Permission: Result'<u8, string>
+
+    abstract Item: string -> Result'<Option'<obj>, string>
+    abstract Comments: Result'<IComment seq, string>
+
+    abstract UpdateBody: string -> Result'<unit, string>
+    abstract UpdatePermission: u8 -> Result'<unit, string>
+    abstract UpdateItem: string -> obj -> Result'<unit, string>
+    abstract NewComment: string -> Result'<IComment, string>

@@ -10,9 +10,9 @@
         <Compile Include="id\uuid.fs" />
         <Compile Include="id\palaflake.fs" />
         <Compile Include="plugin\plugin.fs" />
-        <Compile Include="container\post.fs" />
         <Compile Include="container\comment.fs" />
-        <Compile Include="access\user.fs" />
+        <Compile Include="container\post.fs" />
+        <Compile Include="access\user\user.fs" />
         <Compile Include="pipeline\pipeline.fs" />
         <Compile Include="pipeline\post\init.fs" />
         <Compile Include="pipeline\post\render.fs" />
@@ -26,6 +26,7 @@
         <Compile Include="pipeline\user\render.fs" />
         <Compile Include="pipeline\user\modify.fs" />
         <Compile Include="pipeline\user\finalize.fs" />
+        <Compile Include="pilipala\app.fs" />
     </ItemGroup>
 
     <ItemGroup>
