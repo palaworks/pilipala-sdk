@@ -5,6 +5,7 @@ open System.Collections
 open System.Collections.Generic
 open fsharper.alias
 open fsharper.typ
+open pilipala.container.comment
 
 /// 文章数据
 /// 此类型仅面向底层公开，负责临时装载非映射数据
@@ -47,3 +48,26 @@ type IMappedPostProvider =
     abstract fetch: i64 -> IMappedPost
     abstract create: PostData -> IMappedPost
     abstract delete: i64 -> PostData
+
+type IPost =
+    abstract CanRead: bool
+    abstract CanWrite: bool
+    abstract CanComment: bool
+
+    abstract Id: i64
+    abstract Title: Result'<string, string>
+    abstract Body: Result'<string, string>
+    abstract CreateTime: Result'<DateTime, string>
+    abstract AccessTime: Result'<DateTime, string>
+    abstract ModifyTime: Result'<DateTime, string>
+    abstract UserId: Result'<i64, string>
+    abstract Permission: Result'<u8, string>
+
+    abstract Item: string -> Result'<Option'<obj>, string>
+    abstract Comments: Result'<IComment seq, string>
+
+    abstract UpdateTitle: string -> Result'<unit, string>
+    abstract UpdateBody: string -> Result'<unit, string>
+    abstract UpdateItem: string -> obj -> Result'<unit, string>
+    abstract UpdatePermission: u8 -> Result'<unit, string>
+    abstract NewComment: string -> Result'<IComment, string>
