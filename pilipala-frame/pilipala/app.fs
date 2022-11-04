@@ -6,6 +6,5 @@ open fsharper.alias
 open pilipala.access.user
 
 type IApp =
-    //TODO para name
-    abstract userLoginById: i64 -> string -> Result'<IUser, string>
-    abstract userLoginByName: string -> string -> Result'<IUser, string>
+    abstract userLoginById: user_id: i64 -> user_pwd: string -> Result'<IUser, string>
+    abstract userLoginByName: user_name: string -> user_pwd: string -> Result'<IUser, string>
