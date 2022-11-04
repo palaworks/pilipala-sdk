@@ -52,9 +52,6 @@ type IMappedUserProvider =
     abstract create: UserData -> IMappedUser
     abstract delete: i64 -> UserData
 
-//TODO deprecated
-//type LoginData = { userName: string; userPwd: string }
-
 type IUser =
 
     abstract ReadPermissionLv: u16
