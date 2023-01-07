@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <LangVersion>preview</LangVersion>
     </PropertyGroup>
@@ -34,12 +34,12 @@
     <ItemGroup>
         <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
         <PackageReference Include="Markdig" Version="0.30.4" />
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
-        <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
-        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.25.0" />
-        <PackageReference Include="Newtonsoft.Json" IncludeAssets="All" Version="13.0.1" />
-        <PackageReference Include="YamlDotNet" Version="12.0.2" />
-        <PackageReference Update="FSharp.Core" Version="6.0.6" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.25.1" />
+        <PackageReference Include="Newtonsoft.Json" IncludeAssets="All" Version="13.0.2" />
+        <PackageReference Include="YamlDotNet" Version="12.2.1" />
+        <PackageReference Update="FSharp.Core" Version="7.0.0" />
     </ItemGroup>
 
     <ItemGroup>
