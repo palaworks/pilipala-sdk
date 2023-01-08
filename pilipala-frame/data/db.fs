@@ -14,7 +14,6 @@ type DbConfig =
       pooling: {| size: u16; sync: u16 |}
       map: {| post: string
               comment: string
-              token: string
               user: string |} }
 
 type IDbOperationBuilder =
@@ -38,5 +37,4 @@ type IDbOperationBuilder =
     abstract tables:
         {| post: string
            comment: string
-           token: string
            user: string |}
