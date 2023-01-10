@@ -23,5 +23,5 @@ type Json with
             |> JsonConvert.SerializeObject }
 
 type Object with
-    /// 序列化到json
+    /// 序列化到 JSON
     member self.serializeToJson() = Json.serializeFrom self
