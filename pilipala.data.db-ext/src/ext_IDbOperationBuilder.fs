@@ -19,9 +19,6 @@ type IDbOperationBuilder with
     [<CustomOperation("inPost")>]
     member db.inPost cmd = cmd, db.tables.post
 
-    [<CustomOperation("inToken")>]
-    member db.inToken cmd = cmd, db.tables.token
-
     [<CustomOperation("inUser")>]
     member db.inUser cmd = cmd, db.tables.user
 

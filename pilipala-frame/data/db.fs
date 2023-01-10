@@ -5,16 +5,16 @@ open System.Threading.Tasks
 open fsharper.typ
 open fsharper.alias
 
-type DbConfig =
-    { connection: {| host: string //考虑到后续可能换用其他控制器，此处与DbManaged不作耦合
+type DbConfig = //考虑到后续可能换用其他控制器，此处与DbManaged不作耦合
+    { connection: {| host: string
                      port: u16
                      usr: string
-                     pwd: string
-                     using: string |}
-      pooling: {| size: u16; sync: u16 |}
-      map: {| post: string
-              comment: string
-              user: string |} }
+                     pwd: string |}
+      definition: {| name: string
+                     post: string
+                     comment: string
+                     user: string |}
+      performance: {| pooling: u16 |} }
 
 type IDbOperationBuilder =
 
@@ -35,6 +35,6 @@ type IDbOperationBuilder =
 
     /// 表集合
     abstract tables:
-        {| post: string
-           comment: string
-           user: string |}
+        {| user: string
+           post: string
+           comment: string |}
