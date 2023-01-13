@@ -5,7 +5,7 @@ open System
 open System.Security.Cryptography
 open pilipala.util.encoding
 
-type SHA1 = { sha1: string }
+type Sha1 = { sha1: string }
 
 type String with
 
@@ -17,5 +17,5 @@ type String with
             |> SHA1.Create().ComputeHash
             |> bytesToHex }
 
-type SHA1 with
+type Sha1 with
     member self.Verify(text: string) = text.sha1.sha1 = self.sha1

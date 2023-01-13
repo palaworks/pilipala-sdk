@@ -70,4 +70,6 @@ type IPost =
     abstract UpdateBody: string -> Result'<unit, string>
     abstract UpdateItem: string -> obj -> Result'<unit, string>
     abstract UpdatePermission: u8 -> Result'<unit, string>
+
     abstract NewComment: string -> Result'<IComment, string>
+    abstract Drop: unit -> Result'<PostData, string>

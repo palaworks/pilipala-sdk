@@ -5,7 +5,7 @@ open System
 open System.Security.Cryptography
 open pilipala.util.encoding
 
-type SHA256 = { sha256: string }
+type Sha256 = { sha256: string }
 
 type String with
 
@@ -17,5 +17,5 @@ type String with
             |> SHA256.Create().ComputeHash
             |> bytesToHex }
 
-type SHA256 with
+type Sha256 with
     member self.Verify(text: string) = text.sha256.sha256 = self.sha256

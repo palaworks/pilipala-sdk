@@ -4,7 +4,7 @@ module pilipala.util.hash.bcrypt
 open System
 open BCrypt.Net
 
-type BCrypt = { bcrypt: string }
+type Bcrypt = { bcrypt: string }
 
 type String with
 
@@ -13,6 +13,6 @@ type String with
     member self.bcrypt =
         { bcrypt = BCrypt.HashPassword(self) }
 
-type BCrypt with
+type Bcrypt with
     member self.Verify text =
         BCrypt.Net.BCrypt.Verify(text, self.bcrypt)

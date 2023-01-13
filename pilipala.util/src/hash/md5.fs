@@ -5,7 +5,7 @@ open System
 open System.Security.Cryptography
 open pilipala.util.encoding
 
-type MD5 = { md5: string }
+type Md5 = { md5: string }
 
 type String with
 
@@ -17,5 +17,5 @@ type String with
             |> MD5.Create().ComputeHash
             |> bytesToHex }
 
-type MD5 with
+type Md5 with
     member self.Verify(text: string) = text.md5.md5 = self.md5

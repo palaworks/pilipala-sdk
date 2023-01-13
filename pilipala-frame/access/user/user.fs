@@ -72,8 +72,6 @@ type IUser =
     abstract GetPost: i64 -> Result'<IPost, string>
     abstract GetComment: i64 -> Result'<IComment, string>
 
-    abstract NewUser: string -> string -> u16 -> Result'<IUser, string>
-    abstract NewPost: string -> string -> Result'<IPost, string>
     abstract UpdateName: string -> Result'<unit, string>
     abstract UpdateEmail: string -> Result'<unit, string>
     abstract UpdatePermission: u16 -> Result'<unit, string>
@@ -86,3 +84,7 @@ type IUser =
     abstract GetReadableComment: unit -> IComment seq
     abstract GetWritableComment: unit -> IComment seq
     abstract GetCommentableComment: unit -> IComment seq
+
+    abstract NewUser: string -> string -> u16 -> Result'<IUser, string>
+    abstract NewPost: string -> string -> Result'<IPost, string>
+    abstract Drop: unit -> Result'<UserData, string>
