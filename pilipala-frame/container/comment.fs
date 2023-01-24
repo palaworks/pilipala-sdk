@@ -16,6 +16,7 @@ type CommentData =
     { Id: i64
       Body: string
       CreateTime: DateTime
+      ModifyTime: DateTime
       Binding: CommentBinding
       UserId: i64
       Permission: u8
@@ -36,6 +37,7 @@ type IMappedComment =
     abstract Id: i64
     abstract Body: string with get, set
     abstract CreateTime: DateTime with get, set
+    abstract ModifyTime: DateTime with get, set
     abstract Binding: CommentBinding with get, set
     abstract UserId: i64 with get, set
     abstract Permission: u8 with get, set
@@ -56,6 +58,8 @@ type IComment =
     abstract Id: i64
     abstract Body: Result'<string, string>
     abstract CreateTime: Result'<DateTime, string>
+    abstract ModifyTime: Result'<DateTime, string>
+    abstract Binding: Result'<CommentBinding, string>
     abstract UserId: Result'<i64, string>
     abstract Permission: Result'<u8, string>
 
