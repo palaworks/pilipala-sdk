@@ -3,7 +3,6 @@ namespace pilipala.access.user
 open System
 open System.Collections
 open System.Collections.Generic
-open System.Windows.Input
 open fsharper.typ
 open fsharper.alias
 open pilipala.container.post
@@ -19,6 +18,7 @@ type UserData =
       AccessTime: DateTime
       Permission: u16
       Props: Map<string, obj> }
+
     member self.Item name =
         self.Props.TryGetValue(name).intoOption' ()
 

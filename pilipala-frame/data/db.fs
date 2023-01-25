@@ -2,7 +2,6 @@ namespace pilipala.data.db
 
 open System.Data.Common
 open System.Threading.Tasks
-open fsharper.typ
 open fsharper.alias
 
 type DbConfig = //考虑到后续可能换用其他控制器，此处与DbManaged不作耦合

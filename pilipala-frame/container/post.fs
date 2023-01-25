@@ -19,6 +19,7 @@ type PostData =
       UserId: i64
       Permission: u8
       Props: Map<string, obj> }
+
     member self.Item name =
         self.Props.TryGetValue(name).intoOption' ()
 
