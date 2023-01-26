@@ -1,5 +1,5 @@
 [<AutoOpen>]
-module pilipala.util.text.string
+module pilipala.util.text.fmt
 
 open System
 open System.Text.RegularExpressions
@@ -7,6 +7,9 @@ open fsharper.alias
 
 let inline private rm p i = Regex.Replace(i, p, "")
 let inline private replace p i (r: string) = Regex.Replace(i, p, r)
+
+let inline upperCase s = (s: string).ToUpper()
+let inline lowerCase s = (s: string).ToLower()
 
 type String with
     //TODO
@@ -29,10 +32,7 @@ type String with
     member self.prefix(length: i32) =
         let max = self.Length
 
-        if length > max then
-            self
-        else
-            self.Substring(0, length)
+        if length > max then self else self.Substring(0, length)
 
     member self.postfix(length: i32) =
         let max = self.Length
