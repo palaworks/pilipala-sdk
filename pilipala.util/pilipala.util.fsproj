@@ -23,8 +23,6 @@
         <Compile Include="src\text\markdown.fs" />
         <Compile Include="src\text\time.fs" />
         <Compile Include="src\text\fmt.fs" />
-        <Compile Include="src\hash\md5.fs" />
-        <Compile Include="src\hash\sha1.fs" />
         <Compile Include="src\hash\sha256.fs" />
         <Compile Include="src\hash\sha512.fs" />
         <Compile Include="src\hash\bcrypt.fs" />
