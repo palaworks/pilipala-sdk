@@ -56,21 +56,21 @@ type IPost =
     abstract CanComment: bool
 
     abstract Id: i64
-    abstract Title: Result'<string, string>
-    abstract Body: Result'<string, string>
-    abstract CreateTime: Result'<DateTime, string>
-    abstract AccessTime: Result'<DateTime, string>
-    abstract ModifyTime: Result'<DateTime, string>
-    abstract UserId: Result'<i64, string>
-    abstract Permission: Result'<u8, string>
+    abstract Title: Result'<string>
+    abstract Body: Result'<string>
+    abstract CreateTime: Result'<DateTime>
+    abstract AccessTime: Result'<DateTime>
+    abstract ModifyTime: Result'<DateTime>
+    abstract UserId: Result'<i64>
+    abstract Permission: Result'<u8>
 
-    abstract Item: string -> Result'<Option'<obj>, string>
-    abstract Comments: Result'<IComment seq, string>
+    abstract Item: string -> Result'<Option'<obj>>
+    abstract Comments: Result'<IComment seq>
 
-    abstract UpdateTitle: string -> Result'<unit, string>
-    abstract UpdateBody: string -> Result'<unit, string>
-    abstract UpdateItem: string -> obj -> Result'<unit, string>
-    abstract UpdatePermission: u8 -> Result'<unit, string>
+    abstract UpdateTitle: string -> Result'<unit>
+    abstract UpdateBody: string -> Result'<unit>
+    abstract UpdateItem: string -> obj -> Result'<unit>
+    abstract UpdatePermission: u8 -> Result'<unit>
 
-    abstract NewComment: string -> Result'<IComment, string>
-    abstract Drop: unit -> Result'<PostData, string>
+    abstract NewComment: string -> Result'<IComment>
+    abstract Drop: unit -> Result'<PostData>

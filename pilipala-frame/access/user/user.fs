@@ -41,10 +41,10 @@ type IMappedUser =
     abstract Item: string -> Option'<obj> with get, set
 
 (*
-    abstract GetPost: id: i64 -> Result'<IPost, string>
-    abstract NewPost: title: string * body: string -> Result'<IPost, string>
-    abstract NewCommentOn: IPost * body: string -> Result'<IComment, string>
-    abstract NewCommentOn: IComment * body: string -> Result'<IComment, string>
+    abstract GetPost: id: i64 -> Result'<IPost>
+    abstract NewPost: title: string * body: string -> Result'<IPost>
+    abstract NewCommentOn: IPost * body: string -> Result'<IComment>
+    abstract NewCommentOn: IComment * body: string -> Result'<IComment>
 *)
 
 type IMappedUserProvider =
@@ -68,14 +68,14 @@ type IUser =
     abstract Permission: u16
     abstract Item: string -> Option'<obj>
 
-    abstract GetUser: i64 -> Result'<IUser, string>
-    abstract GetPost: i64 -> Result'<IPost, string>
-    abstract GetComment: i64 -> Result'<IComment, string>
+    abstract GetUser: i64 -> Result'<IUser>
+    abstract GetPost: i64 -> Result'<IPost>
+    abstract GetComment: i64 -> Result'<IComment>
 
-    abstract UpdateName: string -> Result'<unit, string>
-    abstract UpdateEmail: string -> Result'<unit, string>
-    abstract UpdatePermission: u16 -> Result'<unit, string>
-    abstract UpdateItem: string -> obj -> Result'<unit, string>
+    abstract UpdateName: string -> Result'<unit>
+    abstract UpdateEmail: string -> Result'<unit>
+    abstract UpdatePermission: u16 -> Result'<unit>
+    abstract UpdateItem: string -> obj -> Result'<unit>
 
     abstract GetReadablePost: unit -> IPost seq
     abstract GetWritablePost: unit -> IPost seq
@@ -85,6 +85,6 @@ type IUser =
     abstract GetWritableComment: unit -> IComment seq
     abstract GetCommentableComment: unit -> IComment seq
 
-    abstract NewUser: string -> string -> u16 -> Result'<IUser, string>
-    abstract NewPost: string -> string -> Result'<IPost, string>
-    abstract Drop: unit -> Result'<UserData, string>
+    abstract NewUser: string -> string -> u16 -> Result'<IUser>
+    abstract NewPost: string -> string -> Result'<IPost>
+    abstract Drop: unit -> Result'<UserData>

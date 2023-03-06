@@ -57,19 +57,19 @@ type IComment =
     abstract CanComment: bool
 
     abstract Id: i64
-    abstract Body: Result'<string, string>
-    abstract CreateTime: Result'<DateTime, string>
-    abstract ModifyTime: Result'<DateTime, string>
-    abstract Binding: Result'<CommentBinding, string>
-    abstract UserId: Result'<i64, string>
-    abstract Permission: Result'<u8, string>
+    abstract Body: Result'<string>
+    abstract CreateTime: Result'<DateTime>
+    abstract ModifyTime: Result'<DateTime>
+    abstract Binding: Result'<CommentBinding>
+    abstract UserId: Result'<i64>
+    abstract Permission: Result'<u8>
 
-    abstract Item: string -> Result'<Option'<obj>, string>
-    abstract Comments: Result'<IComment seq, string>
+    abstract Item: string -> Result'<Option'<obj>>
+    abstract Comments: Result'<IComment seq>
 
-    abstract UpdateBody: string -> Result'<unit, string>
-    abstract UpdatePermission: u8 -> Result'<unit, string>
-    abstract UpdateItem: string -> obj -> Result'<unit, string>
+    abstract UpdateBody: string -> Result'<unit>
+    abstract UpdatePermission: u8 -> Result'<unit>
+    abstract UpdateItem: string -> obj -> Result'<unit>
 
-    abstract NewComment: string -> Result'<IComment, string>
-    abstract Drop: unit -> Result'<CommentData, string>
+    abstract NewComment: string -> Result'<IComment>
+    abstract Drop: unit -> Result'<CommentData>
