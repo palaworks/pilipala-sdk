@@ -32,18 +32,18 @@
 
     <ItemGroup>
         <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
-        <PackageReference Include="Markdig" Version="0.30.4" />
+        <PackageReference Include="Markdig" Version="0.31.0" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
         <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
-        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.25.1" />
-        <PackageReference Include="Newtonsoft.Json" IncludeAssets="All" Version="13.0.2" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.31.0" />
+        <PackageReference Include="Newtonsoft.Json" IncludeAssets="All" Version="13.0.3" />
         <PackageReference Include="Tomlyn" Version="0.16.2" />
-        <PackageReference Include="YamlDotNet" Version="12.3.1" />
-        <PackageReference Update="FSharp.Core" Version="7.0.0" />
+        <PackageReference Include="YamlDotNet" Version="13.1.1" />
+        <PackageReference Update="FSharp.Core" Version="7.0.300" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\fsharper\fsharper.fsproj" />
+      <ProjectReference Include="..\..\..\thaumy\fsharper\fsharper.fsproj" />
       <ProjectReference Include="..\pilipala-frame\pilipala-frame.fsproj" />
     </ItemGroup>
 
