@@ -1,7 +1,5 @@
 namespace pilipala.plugin
 
-open fsharper.alias
-
 type IPluginCfgProvider =
     abstract config: string with get, set
 

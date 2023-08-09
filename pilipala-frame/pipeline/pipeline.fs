@@ -1,10 +1,8 @@
 ﻿namespace pilipala.pipeline
 
-open System
 open System.Collections.Generic
 open fsharper.op
 open fsharper.typ
-open fsharper.op.Foldable
 
 type PipelineCombineMode<'I, 'O> =
     /// 在管道入口插入管道（数据库获取之前）
@@ -23,6 +21,7 @@ type BuilderItem<'T> = BuilderItem<'T, 'T>
 [<AutoOpen>]
 module ext_BuilderItem =
     type BuilderItem<'I, 'O> with
+
         member inline self.fullyBuild basePipe =
             let fail =
                 (self.beforeFail.foldr (<.) id) //before fail

@@ -9,6 +9,7 @@ open DbManaged.PgSql
 open pilipala.data.db
 
 type IDbOperationBuilder with
+
     member db.Yield _ = db.makeCmd ()
 
 type IDbOperationBuilder with
@@ -18,9 +19,6 @@ type IDbOperationBuilder with
 
     [<CustomOperation("inPost")>]
     member db.inPost cmd = cmd, db.tables.post
-
-    [<CustomOperation("inToken")>]
-    member db.inToken cmd = cmd, db.tables.token
 
     [<CustomOperation("inUser")>]
     member db.inUser cmd = cmd, db.tables.user
@@ -33,15 +31,16 @@ type IDbOperationBuilder with
     [<CustomOperation("select")>]
     member db.select(cmd, sql, paras) = (cmd: DbCommand).select (sql, paras)
 
+    [<CustomOperation("query")>]
+    member db.query(cmd, sql, paras) = (cmd: DbCommand).query (sql, paras)
+
     [<CustomOperation("update")>]
     member db.update((cmd, table), targetKey, targetVal, whereKey, whereVal) =
-        (cmd: DbCommand)
-            .update (table, (targetKey, targetVal), (whereKey, whereVal))
+        (cmd: DbCommand).update (table, (targetKey, targetVal), (whereKey, whereVal))
 
     [<CustomOperation("delete")>]
     member db.delete((cmd, table), whereKey, whereVal) =
-        (cmd: DbCommand)
-            .delete (table, whereKey, whereVal)
+        (cmd: DbCommand).delete (table, whereKey, whereVal)
 
 type IDbOperationBuilder with
 
@@ -50,13 +49,11 @@ type IDbOperationBuilder with
 
     [<CustomOperation("getFstVal")>]
     member db.getFstVal((cmd, table), targetKey, whereKey, whereVal) =
-        (cmd: DbCommand)
-            .getFstVal (table, targetKey, whereKey, whereVal)
+        (cmd: DbCommand).getFstVal (table, targetKey, whereKey, whereVal)
 
     [<CustomOperation("getFstRow")>]
     member db.getFstRow((cmd, table), whereKey, whereVal) =
-        (cmd: DbCommand)
-            .getFstRow (table, whereKey, whereVal)
+        (cmd: DbCommand).getFstRow (table, whereKey, whereVal)
 
     [<CustomOperation("getFstRow")>]
     member db.getFstRow(cmd, sql, paras) = (cmd: DbCommand).getFstRow (sql, paras)

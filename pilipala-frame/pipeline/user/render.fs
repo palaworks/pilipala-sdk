@@ -2,9 +2,8 @@ namespace pilipala.pipeline.user
 
 open System
 open System.Collections.Generic
-open System.Security
+open fsharper.typ
 open fsharper.alias
-open fsharper.typ.Option'
 open pilipala.pipeline
 
 type IUserRenderPipelineBuilder =

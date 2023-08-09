@@ -36,5 +36,5 @@ type Yaml with
         { yaml = SerializerBuilder().Build().Serialize obj }
 
 type Object with
-    /// 序列化到yaml
+    /// 序列化到 YAML
     member self.serializeToYaml() = Yaml.serializeFrom self

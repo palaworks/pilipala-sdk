@@ -16,34 +16,34 @@
         <Compile Include="src\crypto\aes.fs" />
         <Compile Include="src\crypto\rsa.fs" />
         <Compile Include="src\socket\tcp.fs" />
-        <Compile Include="src\hash\md5.fs" />
-        <Compile Include="src\hash\sha1.fs" />
-        <Compile Include="src\hash\sha256.fs" />
-        <Compile Include="src\hash\sha512.fs" />
-        <Compile Include="src\hash\bcrypt.fs" />
+        <Compile Include="src\text\toml.fs" />
         <Compile Include="src\text\json.fs" />
         <Compile Include="src\text\yaml.fs" />
         <Compile Include="src\text\html.fs" />
         <Compile Include="src\text\markdown.fs" />
         <Compile Include="src\text\time.fs" />
-        <Compile Include="src\text\string.fs" />
+        <Compile Include="src\text\fmt.fs" />
+        <Compile Include="src\hash\sha256.fs" />
+        <Compile Include="src\hash\sha512.fs" />
+        <Compile Include="src\hash\bcrypt.fs" />
         <Compile Include="src\id\uuid.fs" />
         <Compile Include="src\id\palaflake.fs" />
     </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
-        <PackageReference Include="Markdig" Version="0.30.4" />
+        <PackageReference Include="Markdig" Version="0.31.0" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
         <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
-        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.25.1" />
-        <PackageReference Include="Newtonsoft.Json" IncludeAssets="All" Version="13.0.2" />
-        <PackageReference Include="YamlDotNet" Version="12.2.1" />
-        <PackageReference Update="FSharp.Core" Version="7.0.0" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.31.0" />
+        <PackageReference Include="Newtonsoft.Json" IncludeAssets="All" Version="13.0.3" />
+        <PackageReference Include="Tomlyn" Version="0.16.2" />
+        <PackageReference Include="YamlDotNet" Version="13.1.1" />
+        <PackageReference Update="FSharp.Core" Version="7.0.300" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\fsharper\fsharper.fsproj" />
+      <ProjectReference Include="..\..\..\thaumy\fsharper\fsharper.fsproj" />
       <ProjectReference Include="..\pilipala-frame\pilipala-frame.fsproj" />
     </ItemGroup>
 
